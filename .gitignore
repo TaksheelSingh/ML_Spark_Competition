@@ -1,0 +1,12 @@
+# Ignore model files
+models/
+output/
+
+# Ignore dataset files (optional)
+data/
+
+# Ignore Python cache and virtual environment
+__pycache__/
+*.pyc
+*.pyo
+venv/
