@@ -10,10 +10,6 @@ ML_Spark_Competition/
 │   ├── train.csv       # Training data (to be added by user)
 │   ├── test.csv        # Test data (to be added by user)
 │
-│── notebooks/          # Jupyter Notebooks for analysis & modeling
-│   ├── EDA.ipynb       # Exploratory Data Analysis
-│   ├── model.ipynb     # Model training & evaluation
-│
 │── src/                # Python scripts for model building
 │   ├── preprocess.py   # Data cleaning & feature engineering
 │   ├── train_model.py  # Model training script
@@ -21,9 +17,6 @@ ML_Spark_Competition/
 │
 │── output/             # Save results & submissions
 │   ├── submission.csv  # Final Kaggle submission file
-│
-│── presentation/       # Slides for business insights
-│   ├── ML_Spark_Presentation.pptx  # Business insights presentation
 │
 │── requirements.txt    # Dependencies
 │── README.md           # Instructions to run the project
