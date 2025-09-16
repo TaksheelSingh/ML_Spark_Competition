@@ -10,7 +10,6 @@ on:
 
 jobs:
   sonar:
-    name: SonarCloud Analysis
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +29,12 @@ jobs:
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v2
         with:
-          organization: TaksheelSingh      # your SonarCloud org
-          projectKey: TaksheelSingh_ML_Spark_Competition
-          token: ${{ secrets.SONAR_TOKEN }}
+          entryPoint: 'sonar-scanner'
+          args: >
+            -Dsonar.organization=TaksheelSingh
+            -Dsonar.projectKey=TaksheelSingh_ML_Spark_Competition
+            -Dsonar.sources=src
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+            -Dsonar.language=py
+            -Dsonar.inclusions=src/**/*.py
