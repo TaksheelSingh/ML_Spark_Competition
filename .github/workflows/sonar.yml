@@ -34,7 +34,7 @@ jobs:
         run: |
           sonar-scanner \
             -Dsonar.projectKey=TaksheelSingh_ML_Spark_Competition \
-            -Dsonar.organization=TaksheelSingh \
+            -Dsonar.organization=taksheelsingh \
             -Dsonar.sources=src \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${SONAR_TOKEN} \
