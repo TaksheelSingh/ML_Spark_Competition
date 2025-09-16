@@ -17,11 +17,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v2
         with:
-          organization: "taksheelsingh"
-          projectKey: "TaksheelSingh_ML_Spark_Competition"
-          projectBaseDir: "."
+          organization: TaksheelSingh      # your SonarCloud org
+          projectKey: TaksheelSingh_ML_Spark_Competition
           token: ${{ secrets.SONAR_TOKEN }}
-          args: "-Dsonar.sources=src -Dsonar.inclusions=src/**/*.py"
